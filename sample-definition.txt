@@ -1,0 +1,70 @@
+02,Somos La Plata
+03,Metro
+04,A 24
+05,C5N
+06,Crónica TV
+07,26 TV
+08,Todo Noticias
+09,América 2
+10,Telefe
+11,Tv Pública
+12,Canal 13
+13,Canal 9
+14,Encuentro
+15,Magazine
+16,Imagen Platense
+17,T y C Sports
+18,ESPN +
+19,ESPN
+20,Fox Sports
+21,Fox Sports 2
+22,El Garage
+23,PAKA-PAKA
+24,Disney Channel
+25,Nickelodeon
+26,Cartoon Network
+27,Disney XD
+33,Discovery Kids
+34,Disney Jrs
+35,Boomerang
+36,Incaa TV
+37,Cinemax
+38,The Film Zone
+39,Volver
+40,Space
+41,Cinecanal Este
+42,TNT
+43,I-Sat
+44,FX
+45,Fox
+46,Sony
+47,Warner Channel
+48,Universal Channel
+49,AXN
+50,A & E
+51,ID Investigación Discovery
+52,TCM
+53,Amc
+54,Infinito
+55,TBS
+56,Comedy Central
+57,Canal Rural
+58,Fox Life
+59,Gourmet.com
+60,E! Entertainment Television
+61,Discovery Home & Health
+62,National Geographic
+63,Discovery Channel
+64,Animal Planet
+65,The History Channel
+66,TRU TV
+67,Canal a
+68,Film & Arts
+69,MTV
+70,Quiero... Musica en mi Idioma
+71,CM Musical
+72,Telesur
+73,CNN en español
+74,La Rai
+75,TV España
+76,El Canal de las Estrellas
