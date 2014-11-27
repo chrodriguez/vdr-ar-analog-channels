@@ -4,6 +4,7 @@ require 'csv'
 opts = GetoptLong.new(
     [ '--help', '-h', GetoptLong::NO_ARGUMENT ],
     [ '--definitions', '-d', GetoptLong::REQUIRED_ARGUMENT ],
+    [ '--add-xmltv2vdr-column', '-a', GetoptLong::NO_ARGUMENT],
     [ '--channels','-c', GetoptLong::REQUIRED_ARGUMENT ]
 )
 
@@ -114,17 +115,21 @@ Usage:
             This help
           -d, --defnitions <definitions-file>
             File with channel number, channel name (Can be created from xmltv config file)
+          -a, --add-xmltv2vdr-column
+            Add last column required for xmltv2vdr.pl script
 
     EOF
 end
 
-definitions = nil
+definitions, add_column = nil, false
 
 opts.each do |opt, arg|
   case opt
   when '--help'
     help
     exit
+  when '--add-xmltv2vdr-column'
+    add_column = true
   when '--definitions'
     definitions = CSV.open(arg,'r').inject(Hash.new) do |all,row|
       all.tap {|hash| hash[row[0]] = row[1] }
@@ -139,6 +144,6 @@ end
 
 definitions.each do |number, name|
   chan_name = "#{number},#{name}"
-  puts "#{chan_name}:#{Integer(freq[number.to_i]*1000)}:TV:V:0:301+101=2:300=@4:305:0:1:0:#{Integer(freq[number.to_i]*16)}:0:#{number}.cablevision"
+  puts "#{chan_name}:#{Integer(freq[number.to_i]*1000)}:TV:V:0:301+101=2:300=@4:305:0:1:0:#{Integer(freq[number.to_i]*16)}:0#{add_column ? ":#{number}.cablevision":""}"
 end
 
