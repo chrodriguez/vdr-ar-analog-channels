@@ -143,7 +143,7 @@ if definitions.nil?
 end
 
 definitions.each do |number, name|
-  chan_name = "#{number},#{name}"
+  chan_name = "#{name},#{number}"
   puts "#{chan_name}:#{Integer(freq[number.to_i]*1000)}:TV:V:0:301+101=2:300=@4:305:0:1:0:#{Integer(freq[number.to_i]*16)}:0#{add_column ? ":#{number}.cablevision":""}"
 end
 
