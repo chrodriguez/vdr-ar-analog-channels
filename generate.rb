@@ -131,7 +131,7 @@ opts.each do |opt, arg|
   when '--add-xmltv2vdr-column'
     add_column = true
   when '--definitions'
-    definitions = CSV.open(arg,'r').inject(Hash.new) do |all,row|
+    definitions = CSV.open(arg,'r',encoding: 'utf-8').inject(Hash.new) do |all,row|
       all.tap {|hash| hash[row[0]] = row[1] }
     end
   end
